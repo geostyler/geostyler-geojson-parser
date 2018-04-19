@@ -1,11 +1,7 @@
-import Data from './Data';
 import { FeatureCollection, Point, LineString, Polygon } from 'geojson';
+import { DataParser } from 'src/@types/geostyler-data';
 
-it('is defined', () => {
-  expect(Data).toBeDefined();
-});
-
-describe('Constructor', () => {
+describe('Data', () => {
   it('can be created with schema and exampleFeatures', () => {
     const featureCollection: FeatureCollection<Point | LineString | Polygon> = {
       type: 'FeatureCollection',
@@ -77,7 +73,7 @@ describe('Constructor', () => {
       }
     };
     const schema = {title: 'test', type: 'foo', properties: props};
-    const data = new Data(schema, featureCollection);
+    const data = {schema: schema, exampleFeatures: featureCollection};
     expect(data).toBeDefined();
     expect(data.schema).toBe(schema);
     expect(data.schema.properties).toBe(props);
@@ -87,5 +83,25 @@ describe('Constructor', () => {
     expect(data.exampleFeatures.type).toBe('FeatureCollection');
     expect(data.exampleFeatures.features.length).toBe(4);
     expect(data.exampleFeatures.features[0].type).toBe('Feature');
+  });
+});
+
+describe('DataParser interface', () => {
+  // create a mock implementation of the interface
+  const Mock = jest.fn<DataParser>(() => ({
+    sourceProjection: 'EPSG:4326',
+    targetProjection: 'EPSG:3857',
+    readData: jest.fn(),
+  }));
+  // get instance
+  const dataParser = new Mock();
+
+  it('has a the correct memebers "sourceProjection" and "targetProjection"', () => {
+    expect(dataParser.sourceProjection).toBe('EPSG:4326');
+    expect(dataParser.targetProjection).toBe('EPSG:3857');
+  });
+  it('has a function "readData"', () => {
+    dataParser.readData({});
+    expect(dataParser.readData).toHaveBeenCalled();
   });
 });
