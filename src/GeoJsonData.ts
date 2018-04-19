@@ -1,4 +1,3 @@
-import DataParser from './Interface/DataParser/DataParser';
 import Data from './Model/Data/Data';
 import { FeatureCollection, GeometryObject } from 'geojson';
 import DataSchema from './Type/DataSchema';
@@ -7,29 +6,26 @@ import { isArray } from 'util';
 /**
  * 
  */
-class GeoJsonDataParser implements DataParser {
+class GeoJsonData implements Data {
+  
+  schema: DataSchema;
+  exampleFeatures: FeatureCollection<GeometryObject>;
 
-  sourceProjection: string;
-  targetProjection: string;
-  constructor(sourceProj?: string, targetProj?: string) {
-    if (sourceProj && targetProj) {
-      this.sourceProjection = sourceProj;
-      this.targetProjection = targetProj;
-    }
-  }
+  // constructor(dataSchmema: DataSchema, exampleFeats: FeatureCollection<GeometryObject>) {
+  //   this.schema = dataSchmema;
+  // }
 
   /**
    * 
    * @param inputData 
    */
-  readData(inputData: any): Data {
+  readData(inputData: any) {
 
     const featureCollection = inputData;
     const schema = this.parseSchema(featureCollection);
-    
-    const data = new Data(schema, featureCollection);
 
-    return data;
+    this.schema = schema;
+    this.exampleFeatures = featureCollection;
   }
 
   /**
@@ -91,4 +87,4 @@ class GeoJsonDataParser implements DataParser {
 
 }
 
-export default GeoJsonDataParser;
+export default GeoJsonData;
