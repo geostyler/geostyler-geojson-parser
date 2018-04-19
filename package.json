@@ -1,0 +1,48 @@
+{
+  "name": "geostyler-geojson-parser",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrismayer/geostyler-geojson-parser.git"
+  },
+  "keywords": [
+    "geostyler",
+    "parser",
+    "data",
+    "geojson"
+  ],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/chrismayer/geostyler-geojson-parser/issues"
+  },
+  "homepage": "https://github.com/chrismayer/geostyler-geojson-parser#readme",
+  "dependencies": {},
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "jest",
+    "lint": "tslint --project tsconfig.json --config tslint.json"
+  },
+  "devDependencies": {
+    "@types/geojson": "7946.0.2",
+    "@types/jest": "^22.2.3",
+    "@types/node": "9.6.5",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.3",
+    "tslint": "^5.9.1",
+    "typescript": "2.8.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "/src/.*\\.spec.(ts|tsx|js)$"
+  }
+}
