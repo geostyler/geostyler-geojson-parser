@@ -1,7 +1,7 @@
 
 import { FeatureCollection, GeometryObject } from 'geojson';
 import { isArray } from 'util';
-import { DataParser, Data, DataSchema } from './@types/geostyler-data';
+import { DataParser, Data, DataSchema } from 'geostyler-data';
 
 /**
  * 

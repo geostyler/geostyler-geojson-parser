@@ -26,6 +26,7 @@
     "lint": "tslint --project tsconfig.json --config tslint.json"
   },
   "devDependencies": {
+    "geostyler-data": "git+https://github.com/chrismayer/geostyler-data.git",
     "@types/geojson": "7946.0.2",
     "@types/jest": "^22.2.3",
     "@types/node": "9.6.5",
