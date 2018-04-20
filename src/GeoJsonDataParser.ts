@@ -1,8 +1,7 @@
-import DataParser from './Interface/DataParser/DataParser';
-import Data from './Model/Data/Data';
+
 import { FeatureCollection, GeometryObject } from 'geojson';
-import DataSchema from './Type/DataSchema';
 import { isArray } from 'util';
+import { DataParser, Data, DataSchema } from 'geostyler-data';
 
 /**
  * 
@@ -27,7 +26,7 @@ class GeoJsonDataParser implements DataParser {
     const featureCollection = inputData;
     const schema = this.parseSchema(featureCollection);
     
-    const data = new Data(schema, featureCollection);
+    const data = {schema: schema, exampleFeatures: featureCollection};
 
     return data;
   }
