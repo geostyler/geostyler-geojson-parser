@@ -2,7 +2,7 @@
   "name": "geostyler-geojson-parser",
   "version": "0.1.0",
   "description": "GeoStyler Data Parser implementation for GeoJSON",
-  "main": "index.js",
+  "main": "build/dist/GeoJsonDataParser.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/terrestris/geostyler-geojson-parser.git"
