@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/terrestris/geostyler-geojson-parser#readme",
   "dependencies": {
+    "geostyler-data": "git+https://github.com/terrestris/geostyler-data.git",
     "@types/geojson": "7946.0.2"
   },
   "scripts": {
@@ -28,7 +29,6 @@
     "lint": "tslint --project tsconfig.json --config tslint.json"
   },
   "devDependencies": {
-    "geostyler-data": "git+https://github.com/terrestris/geostyler-data.git",
     "@types/jest": "^22.2.3",
     "@types/node": "9.6.5",
     "jest": "^22.4.3",
