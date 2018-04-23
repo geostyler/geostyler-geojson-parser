@@ -24,6 +24,7 @@
     "@types/geojson": "7946.0.2"
   },
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "pretest": "npm run lint",
     "test": "jest",
     "lint": "tslint --project tsconfig.json --config tslint.json"
