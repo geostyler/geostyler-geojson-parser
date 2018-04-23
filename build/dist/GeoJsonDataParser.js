@@ -1,4 +1,3 @@
-import { isArray } from 'util';
 /**
  *
  */
@@ -27,7 +26,7 @@ var GeoJsonDataParser = /** @class */ (function () {
         var dataProperties = {};
         var numValues = {};
         var features = geojson.features;
-        if (!features || !isArray(features)) {
+        if (!features || !Array.isArray(features)) {
             throw new Error('Given GeoJSON FeatureCollection does not have a "features" array - EXIT!');
         }
         features.forEach(function (feature) {
@@ -45,7 +44,7 @@ var GeoJsonDataParser = /** @class */ (function () {
                     }
                     if (!dataProperties[key]) {
                         dataProperties[key] = {
-                            type: isArray(propVal) ? 'array' : typeof (propVal)
+                            type: Array.isArray(propVal) ? 'array' : typeof (propVal)
                         };
                     }
                 }
