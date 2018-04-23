@@ -1,6 +1,4 @@
-
 import { FeatureCollection, GeometryObject } from 'geojson';
-import { isArray } from 'util';
 import { DataParser, Data, DataSchema } from 'geostyler-data';
 
 /**
@@ -41,7 +39,7 @@ class GeoJsonDataParser implements DataParser {
     const numValues = {};
     const features = geojson.features;
 
-    if (!features || !isArray(features)) {
+    if (!features || !Array.isArray(features)) {
       throw new Error('Given GeoJSON FeatureCollection does not have a "features" array - EXIT!');
     }
 
@@ -62,7 +60,7 @@ class GeoJsonDataParser implements DataParser {
 
           if (!dataProperties[key]) {
             dataProperties[key] = {
-              type: isArray(propVal) ? 'array' : typeof(propVal)
+              type: Array.isArray(propVal) ? 'array' : typeof(propVal)
             };
           }
 
