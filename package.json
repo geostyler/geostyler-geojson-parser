@@ -2,7 +2,7 @@
   "name": "geostyler-geojson-parser",
   "version": "0.1.0",
   "description": "GeoStyler Data Parser implementation for GeoJSON",
-  "main": "src/GeoJsonDataParser.ts",
+  "main": "build/dist/GeoJsonDataParser.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/terrestris/geostyler-geojson-parser.git"
@@ -19,15 +19,16 @@
     "url": "https://github.com/terrestris/geostyler-geojson-parser/issues"
   },
   "homepage": "https://github.com/terrestris/geostyler-geojson-parser#readme",
-  "dependencies": {},
+  "dependencies": {
+    "geostyler-data": "git+https://github.com/terrestris/geostyler-data.git",
+    "@types/geojson": "7946.0.2"
+  },
   "scripts": {
     "pretest": "npm run lint",
     "test": "jest",
     "lint": "tslint --project tsconfig.json --config tslint.json"
   },
   "devDependencies": {
-    "geostyler-data": "git+https://github.com/terrestris/geostyler-data.git",
-    "@types/geojson": "7946.0.2",
     "@types/jest": "^22.2.3",
     "@types/node": "9.6.5",
     "jest": "^22.4.3",
