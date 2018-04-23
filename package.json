@@ -19,7 +19,9 @@
     "url": "https://github.com/terrestris/geostyler-geojson-parser/issues"
   },
   "homepage": "https://github.com/terrestris/geostyler-geojson-parser#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/geojson": "7946.0.2"
+  },
   "scripts": {
     "pretest": "npm run lint",
     "test": "jest",
@@ -27,7 +29,6 @@
   },
   "devDependencies": {
     "geostyler-data": "git+https://github.com/terrestris/geostyler-data.git",
-    "@types/geojson": "7946.0.2",
     "@types/jest": "^22.2.3",
     "@types/node": "9.6.5",
     "jest": "^22.4.3",
