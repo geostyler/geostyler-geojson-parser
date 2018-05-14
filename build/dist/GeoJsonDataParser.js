@@ -16,7 +16,11 @@ var GeoJsonDataParser = /** @class */ (function () {
         var featureCollection = inputData;
         var schema = this.parseSchema(featureCollection);
         var data = { schema: schema, exampleFeatures: featureCollection };
-        return data;
+        var promise = new Promise(function (resolve, reject) {
+            // If we have a valid data object we can bind it to the promise resolver
+            resolve(data);
+        });
+        return promise;
     };
     /**
      *
