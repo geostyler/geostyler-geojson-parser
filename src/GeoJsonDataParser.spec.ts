@@ -81,37 +81,41 @@ describe('readData implementation', () => {
       ]
     };
 
-  it('works as expected and returns the correct data', () => {
+  it('works as expected and returns the correct data in a promise object', () => {
     const gjParser = new GeoJsonDataParser();
-    const output = gjParser.readData(geojson);
-    expect(output).toBeDefined();
-    expect(output.exampleFeatures.features.length).toBe(4);
 
-    const expectedSchema = {
-      'type': 'object',
-      'properties': {
-        'propString': {
-          'type': 'string'
-        },
-        'propNumber': {
-          'type': 'number',
-          'minimum': 10,
-          'maximum': 40
-        },
-        'propBoolean': {
-          'type': 'boolean'
-        },
-        'propArray': {
-          'type': 'array'
-        },
-        'anotherPropNumber': {
-          'type': 'number',
-          'minimum': 100.5,
-          'maximum': 400.5
-        },
-      }
-    };
-    expect(output.schema).toEqual(expectedSchema);
+    const promise = gjParser.readData(geojson);
+    promise.then((output) => {
+      expect(output).toBeDefined();
+      expect(output.exampleFeatures.features.length).toBe(4);
+
+      const expectedSchema = {
+        'type': 'object',
+        'properties': {
+          'propString': {
+            'type': 'string'
+          },
+          'propNumber': {
+            'type': 'number',
+            'minimum': 10,
+            'maximum': 40
+          },
+          'propBoolean': {
+            'type': 'boolean'
+          },
+          'propArray': {
+            'type': 'array'
+          },
+          'anotherPropNumber': {
+            'type': 'number',
+            'minimum': 100.5,
+            'maximum': 400.5
+          },
+        }
+      };
+      expect(output.schema).toEqual(expectedSchema);
+    });
+
   });
 
   it('exits when an invalid geojson is given as input', () => {
