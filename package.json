@@ -1,8 +1,12 @@
 {
   "name": "geostyler-geojson-parser",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "GeoStyler Data Parser implementation for GeoJSON",
   "main": "build/dist/GeoJsonDataParser.js",
+  "files": [
+    "build",
+    "index.d.ts"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/terrestris/geostyler-geojson-parser.git"
@@ -27,12 +31,14 @@
     "build": "tsc -p tsconfig.json",
     "pretest": "npm run lint",
     "test": "jest",
-    "lint": "tslint --project tsconfig.json --config tslint.json"
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "release": "np --no-yarn"
   },
   "devDependencies": {
     "@types/jest": "22.2.3",
     "@types/node": "10.0.9",
     "jest": "22.4.3",
+    "np": "^2.20.1",
     "ts-jest": "22.4.6",
     "tslint": "5.10.0",
     "typescript": "2.8.3"
