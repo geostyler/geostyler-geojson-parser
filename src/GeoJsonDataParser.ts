@@ -2,12 +2,19 @@ import { FeatureCollection, GeometryObject } from 'geojson';
 import { DataParser, Data, DataSchema } from 'geostyler-data';
 
 /**
- * 
+ *
  */
 class GeoJsonDataParser implements DataParser {
 
+  /**
+   * The name of the GeoJsonDataParser.
+   */
+  public static title = 'GeoJSON Data Parser';
+
   sourceProjection: string;
+
   targetProjection: string;
+
   constructor(sourceProj?: string, targetProj?: string) {
     if (sourceProj && targetProj) {
       this.sourceProjection = sourceProj;
@@ -16,14 +23,14 @@ class GeoJsonDataParser implements DataParser {
   }
 
   /**
-   * 
-   * @param inputData 
+   *
+   * @param inputData
    */
   readData(inputData: any): Promise<Data> {
 
     const featureCollection = inputData;
     const schema = this.parseSchema(featureCollection);
-    
+
     const data = {schema: schema, exampleFeatures: featureCollection};
 
     const promise = new Promise<Data>((resolve, reject) => {
@@ -35,8 +42,8 @@ class GeoJsonDataParser implements DataParser {
   }
 
   /**
-   * 
-   * @param geojson {FeatureCollection<GeometryObject>} 
+   *
+   * @param geojson {FeatureCollection<GeometryObject>}
    */
   parseSchema(geojson: FeatureCollection<GeometryObject>): DataSchema {
 
@@ -55,7 +62,7 @@ class GeoJsonDataParser implements DataParser {
           let propVal = props[key];
 
           const propType = typeof(propVal);
-          
+
           if (propType === 'number') {
             if (!numValues[key]) {
               numValues[key] = [];
@@ -74,7 +81,7 @@ class GeoJsonDataParser implements DataParser {
       }
 
     });
-        
+
     for (let propKey of Object.keys(numValues)) {
       const nums = numValues[propKey];
       const sortedNums: number[] = nums.sort((n1: number, n2: number) => n1 - n2);
