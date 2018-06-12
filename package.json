@@ -37,6 +37,7 @@
   "devDependencies": {
     "@types/jest": "23.0.2",
     "@types/node": "10.3.2",
+    "coveralls": "3.0.1",
     "jest": "23.1.0",
     "np": "3.0.4",
     "ts-jest": "22.4.6",
@@ -51,6 +52,9 @@
     "transform": {
       "\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "/src/.*\\.spec.(ts|js)$"
+    "testRegex": "/src/.*\\.spec.(ts|js)$",
+    "collectCoverageFrom": [
+      "src/*.{ts}"
+    ]
   }
 }
