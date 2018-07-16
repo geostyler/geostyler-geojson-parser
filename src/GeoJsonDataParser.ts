@@ -1,5 +1,6 @@
 import { FeatureCollection, GeometryObject } from 'geojson';
 import { DataParser, Data, DataSchema } from 'geostyler-data';
+import { JSONSchema4TypeName } from 'json-schema';
 
 /**
  *
@@ -61,7 +62,7 @@ class GeoJsonDataParser implements DataParser {
         for (let key of Object.keys(props)) {
           let propVal = props[key];
 
-          const propType = typeof(propVal);
+          const propType: JSONSchema4TypeName = <JSONSchema4TypeName> typeof(propVal);
 
           if (propType === 'number') {
             if (!numValues[key]) {
@@ -72,7 +73,7 @@ class GeoJsonDataParser implements DataParser {
 
           if (!dataProperties[key]) {
             dataProperties[key] = {
-              type: Array.isArray(propVal) ? 'array' : typeof(propVal)
+              type: propType
             };
           }
 
