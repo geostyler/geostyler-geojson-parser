@@ -5,7 +5,7 @@ import { JSONSchema4TypeName } from 'json-schema';
 /**
  *
  */
-class GeoJsonDataParser implements DataParser {
+export class GeoJsonDataParser implements DataParser {
 
   /**
    * The name of the GeoJsonDataParser.
