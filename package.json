@@ -35,7 +35,7 @@
     "pretest": "npm run lint",
     "test": "jest",
     "lint": "tslint --project tsconfig.json --config tslint.json",
-    "release": "np --no-yarn"
+    "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-geojson-parser.git master --tags"
   },
   "devDependencies": {
     "@babel/polyfill": "7.0.0",
