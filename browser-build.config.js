@@ -2,7 +2,7 @@ const webpack = require("webpack");
 require("@babel/polyfill");
 
 module.exports = {
-  entry: ['@babel/polyfill', './src/GeoJsonDataParser.ts'],
+  entry: ["@babel/polyfill", "./src/GeoJsonDataParser.ts"],
   output: {
     filename: "geoJsonDataParser.js",
     path: __dirname + "/browser",
