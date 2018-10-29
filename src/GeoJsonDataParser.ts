@@ -62,7 +62,10 @@ export class GeoJsonDataParser implements DataParser {
         for (let key of Object.keys(props)) {
           let propVal = props[key];
 
-          const propType: JSONSchema4TypeName = <JSONSchema4TypeName> typeof(propVal);
+          let propType: JSONSchema4TypeName = <JSONSchema4TypeName> typeof(propVal);
+          if (Array.isArray(propVal)) {
+            propType = 'array';
+          }
 
           if (propType === 'number') {
             if (!numValues[key]) {
