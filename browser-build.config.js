@@ -3,6 +3,7 @@ require("@babel/polyfill");
 
 module.exports = {
   entry: ["@babel/polyfill", "./src/GeoJsonDataParser.ts"],
+  mode: 'production',
   output: {
     filename: "geoJsonDataParser.js",
     path: __dirname + "/browser",
