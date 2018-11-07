@@ -25,9 +25,7 @@
   },
   "homepage": "https://github.com/terrestris/geostyler-geojson-parser#readme",
   "dependencies": {
-    "geostyler-data": "0.5.1",
-    "@types/geojson": "7946.0.4",
-    "@types/json-schema": "7.0.1"
+    "geostyler-data": "0.5.1"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json && npm run build:browser",
@@ -39,7 +37,9 @@
   },
   "devDependencies": {
     "@babel/polyfill": "7.0.0",
+    "@types/geojson": "7946.0.4",
     "@types/jest": "23.3.9",
+    "@types/json-schema": "7.0.1",
     "@types/node": "10.12.2",
     "awesome-typescript-loader": "4.0.1",
     "coveralls": "3.0.1",
