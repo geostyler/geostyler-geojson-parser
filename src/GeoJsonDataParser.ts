@@ -28,18 +28,18 @@ export class GeoJsonDataParser implements DataParser {
    * @param inputData
    */
   readData(inputData: any): Promise<Data> {
+    return new Promise<Data>((resolve, reject) => {
+      try {
+        const featureCollection = inputData;
+        const schema = this.parseSchema(featureCollection);
 
-    const featureCollection = inputData;
-    const schema = this.parseSchema(featureCollection);
-
-    const data = {schema: schema, exampleFeatures: featureCollection};
-
-    const promise = new Promise<Data>((resolve, reject) => {
-      // If we have a valid data object we can bind it to the promise resolver
-      resolve(data);
+        const data = {schema: schema, exampleFeatures: featureCollection};
+          // If we have a valid data object we can bind it to the promise resolver
+        resolve(data);
+      } catch (e) {
+        reject(e);
+      }
     });
-
-    return promise;
   }
 
   /**
