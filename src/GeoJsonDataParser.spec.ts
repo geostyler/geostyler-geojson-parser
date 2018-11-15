@@ -118,30 +118,32 @@ describe('readData implementation', () => {
 
   });
 
-  it('exits when an invalid geojson is given as input', () => {
+  it('rejects the promise if an invalid geojson is given as input', () => {
     const invalidGeojson = {
       type: 'FeatureCollection',
       foo: 'bar',
       kalle: 'Berga'
     };
     const gjParser = new GeoJsonDataParser();
-    let output;
-    try {
-      output = gjParser.readData(invalidGeojson);
-    } catch (error) {
-      expect(output).toBeUndefined();
-    }
+    gjParser.readData(invalidGeojson)
+      .then((data) => {
+        expect(data).toBeUndefined();
+      })
+      .catch((e) => {
+        expect(e).toBeDefined();
+      });
   });
 
-  it('exits when an invalid data is given as input', () => {
+  it('rejects the promise if an invalid data is given as input', () => {
     const invalidData = '<?xml version="1.0" encoding="UTF-8"?><foo>123</foo>';
     const gjParser = new GeoJsonDataParser();
-    let output;
-    try {
-      output = gjParser.readData(invalidData);
-    } catch (error) {
-      expect(output).toBeUndefined();
-    }
+    gjParser.readData(invalidData)
+      .then((data) => {
+        expect(data).toBeUndefined();
+      })
+      .catch((e) => {
+        expect(e).toBeDefined();
+      });
   });
 
 });
