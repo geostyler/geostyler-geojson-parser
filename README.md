@@ -6,4 +6,5 @@
 
 [GeoStyler](https://github.com/terrestris/geostyler/) Data Parser implementation for GeoJSON
 
-Work in progress, stay tuned...
+### Issues
+Please provide related issues here https://github.com/terrestris/geostyler/issues
