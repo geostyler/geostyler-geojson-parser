@@ -36,7 +36,7 @@
     "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-geojson-parser.git master --tags"
   },
   "devDependencies": {
-    "@babel/polyfill": "7.2.3",
+    "@babel/polyfill": "7.2.5",
     "@types/geojson": "7946.0.4",
     "@types/jest": "23.3.10",
     "@types/json-schema": "7.0.1",
