@@ -36,9 +36,9 @@
     "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-geojson-parser.git master --tags"
   },
   "devDependencies": {
-    "@babel/polyfill": "7.2.3",
+    "@babel/polyfill": "7.2.5",
     "@types/geojson": "7946.0.4",
-    "@types/jest": "23.3.10",
+    "@types/jest": "23.3.11",
     "@types/json-schema": "7.0.1",
     "@types/node": "10.12.18",
     "awesome-typescript-loader": "4.0.1",
@@ -48,7 +48,7 @@
     "ts-jest": "23.10.5",
     "tslint": "5.10.0",
     "typescript": "2.9.1",
-    "uglifyjs-webpack-plugin": "1.1.2",
+    "uglifyjs-webpack-plugin": "2.1.1",
     "webpack": "4.28.3",
     "webpack-cli": "3.1.2"
   },
