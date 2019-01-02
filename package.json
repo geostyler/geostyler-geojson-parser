@@ -38,7 +38,7 @@
   "devDependencies": {
     "@babel/polyfill": "7.2.5",
     "@types/geojson": "7946.0.4",
-    "@types/jest": "23.3.10",
+    "@types/jest": "23.3.11",
     "@types/json-schema": "7.0.1",
     "@types/node": "10.12.18",
     "awesome-typescript-loader": "4.0.1",
