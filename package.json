@@ -40,7 +40,7 @@
     "@types/geojson": "7946.0.5",
     "@types/jest": "23.3.11",
     "@types/json-schema": "7.0.1",
-    "@types/node": "10.12.19",
+    "@types/node": "10.12.20",
     "awesome-typescript-loader": "4.0.1",
     "coveralls": "3.0.1",
     "jest": "23.1.0",
