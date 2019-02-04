@@ -39,7 +39,7 @@
     "@babel/polyfill": "7.2.5",
     "@types/geojson": "7946.0.5",
     "@types/jest": "23.3.11",
-    "@types/json-schema": "7.0.1",
+    "@types/json-schema": "7.0.2",
     "@types/node": "10.12.21",
     "awesome-typescript-loader": "4.0.1",
     "coveralls": "3.0.1",
