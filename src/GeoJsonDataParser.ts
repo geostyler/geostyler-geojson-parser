@@ -1,5 +1,5 @@
 import { FeatureCollection, GeometryObject } from 'geojson';
-import { DataParser, Data, DataSchema } from 'geostyler-data';
+import { DataParser, VectorData, DataSchema } from 'geostyler-data';
 import { JSONSchema4TypeName } from 'json-schema';
 
 /**
@@ -11,6 +11,8 @@ export class GeoJsonDataParser implements DataParser {
    * The name of the GeoJsonDataParser.
    */
   public static title = 'GeoJSON Data Parser';
+
+  title = 'GeoJSON Data Parser';
 
   sourceProjection: string;
 
@@ -27,8 +29,8 @@ export class GeoJsonDataParser implements DataParser {
    *
    * @param inputData
    */
-  readData(inputData: any): Promise<Data> {
-    return new Promise<Data>((resolve, reject) => {
+  readData(inputData: any): Promise<VectorData> {
+    return new Promise<VectorData>((resolve, reject) => {
       try {
         const featureCollection = inputData;
         const schema = this.parseSchema(featureCollection);
