@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/terrestris/geostyler-geojson-parser#readme",
   "dependencies": {
-    "@babel/polyfill": "7.4.3",
+    "@babel/polyfill": "7.4.4",
     "@types/geojson": "7946.0.7",
     "@types/jest": "24.0.12",
     "@types/json-schema": "7.0.3",
@@ -42,10 +42,10 @@
     "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-geojson-parser.git master --tags"
   },
   "devDependencies": {
-    "@babel/core": "7.4.3",
-    "@babel/plugin-proposal-class-properties": "7.4.0",
-    "@babel/plugin-proposal-object-rest-spread": "7.4.3",
-    "@babel/preset-env": "7.4.3",
+    "@babel/core": "7.4.4",
+    "@babel/plugin-proposal-class-properties": "7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.4",
+    "@babel/preset-env": "7.4.4",
     "@babel/preset-typescript": "7.3.3",
     "babel-jest": "24.7.1",
     "coveralls": "3.0.3",
