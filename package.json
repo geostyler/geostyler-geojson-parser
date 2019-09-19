@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terrestris/geostyler-geojson-parser.git"
+    "url": "git+https://github.com/geostyler/geostyler-geojson-parser.git"
   },
   "keywords": [
     "geostyler",
@@ -22,9 +22,9 @@
   "author": "",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/terrestris/geostyler-geojson-parser/issues"
+    "url": "https://github.com/geostyler/geostyler-geojson-parser/issues"
   },
-  "homepage": "https://github.com/terrestris/geostyler-geojson-parser#readme",
+  "homepage": "https://github.com/geostyler/geostyler-geojson-parser#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "@types/geojson": "^7946.0.7",
@@ -39,7 +39,7 @@
     "pretest": "npm run lint",
     "test": "jest",
     "lint": "tslint --project tsconfig.json --config tslint.json",
-    "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-geojson-parser.git master --tags"
+    "release": "np --no-yarn && git push https://github.com/geostyler/geostyler-geojson-parser.git master --tags"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
