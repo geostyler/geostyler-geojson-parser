@@ -5,6 +5,3 @@
 [![Coverage Status](https://coveralls.io/repos/github/geostyler/geostyler-geojson-parser/badge.svg?branch=master)](https://coveralls.io/github/geostyler/geostyler-geojson-parser?branch=master)
 
 [GeoStyler](https://github.com/geostyler/geostyler/) Data Parser implementation for GeoJSON
-
-### Issues
-Please provide related issues here https://github.com/geostyler/geostyler/issues
