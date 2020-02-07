@@ -50,7 +50,7 @@
     "babel-jest": "^24.9.0",
     "coveralls": "^3.0.6",
     "jest": "^24.9.0",
-    "np": "^5.0.3",
+    "np": "^6.0.0",
     "terser-webpack-plugin": "^2.0.0",
     "ts-loader": "^6.0.4",
     "tslint": "^5.19.0",
