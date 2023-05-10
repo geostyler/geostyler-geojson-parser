@@ -50,8 +50,8 @@ export class GeoJsonDataParser implements DataParser {
    */
   parseSchema(geojson: FeatureCollection<GeometryObject>): DataSchema {
 
-    const dataProperties = {};
-    const numValues = {};
+    const dataProperties: any = {};
+    const numValues: any = {};
     const features = geojson.features;
 
     if (!features || !Array.isArray(features)) {
