@@ -27,6 +27,7 @@
     "jest",
     "**/*.spec.ts",
     "browser",
-    "browser-build.config.js"
+    "vite.config.ts",
+    "vitest.config.ts"
   ]
 }
