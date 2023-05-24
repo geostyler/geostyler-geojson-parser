@@ -47,5 +47,6 @@
     "typescript": "^5.0.4",
     "vite": "^4.3.5",
     "vitest": "^0.31.0"
-  }
+  },
+  "funding": "https://opencollective.com/geostyler"
 }
