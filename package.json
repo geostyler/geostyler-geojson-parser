@@ -1,6 +1,6 @@
 {
   "name": "geostyler-geojson-parser",
-  "version": "2.0.0-next.1",
+  "version": "2.0.0-beta.1",
   "description": "GeoStyler Data Parser implementation for GeoJSON",
   "main": "dist/GeoJsonDataParser.js",
   "type": "module",
