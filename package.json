@@ -1,11 +1,8 @@
 {
   "name": "geostyler-geojson-parser",
-  "version": "2.0.0-next.1",
+  "version": "2.0.0-beta.1",
   "description": "GeoStyler Data Parser implementation for GeoJSON",
   "main": "dist/GeoJsonDataParser.js",
-  "module": "dist/GeoJsonDataParser.js",
-  "types": "dist/GeoJsonDataParser.d.ts",
-  "browser": "dist/geoJsonDataParser.iife.js",
   "type": "module",
   "files": [
     "dist",
@@ -39,12 +36,18 @@
     "release": "np --no-yarn && git push https://github.com/geostyler/geostyler-geojson-parser.git master --tags"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/geojson": "^7946.0.10",
     "@types/json-schema": "^7.0.11",
     "@types/node": "^20.1.2",
     "@vitest/coverage-istanbul": "^1.0.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
     "coveralls": "^3.1.1",
     "np": "^8.0.0",
+    "semantic-release": "^24.0.0",
     "tslint": "^6.1.3",
     "typescript": "^5.4.5",
     "vite": "^4.3.5",
