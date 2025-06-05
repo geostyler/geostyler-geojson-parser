@@ -36,7 +36,7 @@ export class GeoJsonDataParser implements DataParser {
         const schema = this.parseSchema(featureCollection);
 
         const data = {schema: schema, exampleFeatures: featureCollection};
-          // If we have a valid data object we can bind it to the promise resolver
+        // If we have a valid data object we can bind it to the promise resolver
         resolve(data);
       } catch (e) {
         reject(e);

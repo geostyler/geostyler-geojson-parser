@@ -19,69 +19,69 @@ describe('readData implementation', () => {
 
   const geojson = {
     type: 'FeatureCollection',
-      features: [
-        {
-          id: 1,
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [1, 1]
-          },
-          properties: {
-            propString: 'A feature with ID 1',
-            propNumber: 10,
-            propBoolean: true,
-            propArray: ['1111', 'Berga', 'foo'],
-            anotherPropNumber: 400.5
-          }
+    features: [
+      {
+        id: 1,
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [1, 1]
         },
-        {
-          id: 2,
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [2, 2]
-          },
-          properties: {
-            propString: 'A feature with ID 2',
-            propNumber: 20,
-            propBoolean: true,
-            propArray: ['2222', 'hello', 'bar'],
-            anotherPropNumber: 200.5
-          }
-        },
-        {
-          id: 3,
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [3, 3]
-          },
-          properties: {
-            propString: 'A feature with ID 3',
-            propNumber: 30,
-            propBoolean: true,
-            propArray: ['3333', 'another', '...'],
-            anotherPropNumber: 300.5
-          }
-        },
-        {
-          id: 4,
-          type: 'Feature',
-          geometry: {
-            type: 'Point',
-            coordinates: [4, 4]
-          },
-          properties: {
-            propString: 'A feature with ID 4',
-            propNumber: 40,
-            propBoolean: true,
-            propArray: ['4444', 'more', 'and more'],
-            anotherPropNumber: 100.5
-          }
+        properties: {
+          propString: 'A feature with ID 1',
+          propNumber: 10,
+          propBoolean: true,
+          propArray: ['1111', 'Berga', 'foo'],
+          anotherPropNumber: 400.5
         }
-      ]
-    };
+      },
+      {
+        id: 2,
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [2, 2]
+        },
+        properties: {
+          propString: 'A feature with ID 2',
+          propNumber: 20,
+          propBoolean: true,
+          propArray: ['2222', 'hello', 'bar'],
+          anotherPropNumber: 200.5
+        }
+      },
+      {
+        id: 3,
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [3, 3]
+        },
+        properties: {
+          propString: 'A feature with ID 3',
+          propNumber: 30,
+          propBoolean: true,
+          propArray: ['3333', 'another', '...'],
+          anotherPropNumber: 300.5
+        }
+      },
+      {
+        id: 4,
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [4, 4]
+        },
+        properties: {
+          propString: 'A feature with ID 4',
+          propNumber: 40,
+          propBoolean: true,
+          propArray: ['4444', 'more', 'and more'],
+          anotherPropNumber: 100.5
+        }
+      }
+    ]
+  };
 
   it('works as expected and returns the correct data in a promise object', () => {
     const gjParser = new GeoJsonDataParser();
@@ -92,26 +92,26 @@ describe('readData implementation', () => {
       expect(output.exampleFeatures.features.length).toBe(4);
 
       const expectedSchema = {
-        'type': 'object',
-        'properties': {
-          'propString': {
-            'type': 'string'
+        type: 'object',
+        properties: {
+          propString: {
+            type: 'string'
           },
-          'propNumber': {
-            'type': 'number',
-            'minimum': 10,
-            'maximum': 40
+          propNumber: {
+            type: 'number',
+            minimum: 10,
+            maximum: 40
           },
-          'propBoolean': {
-            'type': 'boolean'
+          propBoolean: {
+            type: 'boolean'
           },
-          'propArray': {
-            'type': 'array'
+          propArray: {
+            type: 'array'
           },
-          'anotherPropNumber': {
-            'type': 'number',
-            'minimum': 100.5,
-            'maximum': 400.5
+          anotherPropNumber: {
+            type: 'number',
+            minimum: 100.5,
+            maximum: 400.5
           },
         }
       };
