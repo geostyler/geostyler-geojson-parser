@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": true,
+    "lib": ["ES2022", "dom"],
+    "module": "Preserve",
+    "moduleResolution": "Bundler",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "ES2022",
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "scripts",
+    "acceptance-tests",
+    "coverage",
+    "webpack",
+    "jest",
+    "browser",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ]
+}
